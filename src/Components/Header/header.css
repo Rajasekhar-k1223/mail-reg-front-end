@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: purple;
+    color: #fff;
+    margin: auto;
+    padding: auto;
+}
+
+.header-inside {
+    margin: 5px;
+}
+
+.head-logo>img {
+    font-size: 18px;
+    width: 65px;
+    height: 65px;
+    border-radius: 60px;
+}
