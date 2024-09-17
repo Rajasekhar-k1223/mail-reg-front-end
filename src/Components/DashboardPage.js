@@ -46,7 +46,7 @@ const docs = [
       <>
           <HeaderPage />
           <SideMenu />
-          <div style={{ width: "96%",left:"4%",padding:"1rem",position:"absolute" }}>
+          <div className='scroller' style={{ width: "96%",left:"4%",padding:"1rem",position:"absolute",height:"90vh",overflow:"auto" }}>
         <h2>Dashboard</h2>
         <p>Set up email with a custom domain</p>
 <p>create email address that end in your organization's name , like you@elv-i.com.</p>
