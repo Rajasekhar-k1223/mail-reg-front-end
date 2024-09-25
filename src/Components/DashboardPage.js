@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import HeaderPage from './Header/HeaderPage'; 
-import SideMenu from './SideMenuPage';
+import SideMenu from './SideMenu/SideMenuPage';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 import { saveAs } from 'file-saver';
 import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";

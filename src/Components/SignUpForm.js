@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import signup from "../assets/images/3856358.jpg";
 import bottom from "../assets/images/2915898.jpg";
 const SignupForm = () => {
+  const navigator = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,6 +13,9 @@ const SignupForm = () => {
     // Perform signup logic here
     console.log("Signup with:", { name, email, password });
   };
+  const loginPage = ()=>{
+    navigator('/login');
+  }
 
   return (
        <div className="row m-auto" >
@@ -52,7 +57,7 @@ const SignupForm = () => {
       </div>
       <div style={{display:'flex',flexDirection:"row",justifyContent:"flex-end"}}>
         
-        <div>Login</div>
+        <div onClick={loginPage}>Login</div>
       </div>
       <button type="submit" className="btn btn-primary w-100 mt-3">
         Signup

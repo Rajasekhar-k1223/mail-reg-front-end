@@ -9,11 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DomainDetails from './Components/DomainDetails';
 import LoginForm from './Components/LoginForm';
 import SignupForm from './Components/SignUpForm';
+import ProtectedRoute from './Components/Protected/ProtectedRoute';
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
+    {/* <Routes>
 
         <Route index element={<WelcomPage />} />
         <Route path='/login' element={<LoginForm />} />
@@ -24,7 +25,31 @@ function App() {
         <Route path='/getMXCname' element={<GetMXCname />} />
         
 
-      </Routes>
+      </Routes> */}
+      <Routes>
+      {/* Public Routes */}
+      <Route path="/" element={<WelcomPage />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/signup" element={<SignupForm />} />
+
+      {/* Protected Routes */}
+      <Route
+        path="/dashboard"
+        element={<ProtectedRoute element={Dashboard} />}
+      />
+      <Route
+        path="/createDomain"
+        element={<ProtectedRoute element={CreateDomain} />}
+      />
+      <Route
+        path="/domainDetails"
+        element={<ProtectedRoute element={DomainDetails} />}
+      />
+      <Route
+        path="/getMXCname"
+        element={<ProtectedRoute element={GetMXCname} />}
+      />
+    </Routes>
       </BrowserRouter>
   );
 }
